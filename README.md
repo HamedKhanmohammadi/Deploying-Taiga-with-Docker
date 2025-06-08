@@ -1,11 +1,11 @@
 
-# 🐳 Deploying Taiga with Docker on Ubuntu 24.04
+#  Deploying Taiga with Docker on Ubuntu 24.04
 
 This guide explains how to install and run the **Taiga Project Management Tool** using **Docker** and **Docker Compose**.
 
 ---
 
-## ✅ Step 1: Install Docker
+##  Step 1: Install Docker
 
 Run the following commands to install Docker:
 
@@ -18,11 +18,11 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 ```
 
-👉 **Important**: You must **log out and log in again** (or run `newgrp docker`) to apply the group changes.
+ **Important**: You must **log out and log in again** (or run `newgrp docker`) to apply the group changes.
 
 ---
 
-## ✅ Step 2: Clone the Taiga Docker Repository
+##  Step 2: Clone the Taiga Docker Repository
 
 ```bash
 git clone https://github.com/taigaio/taiga-docker.git
@@ -31,7 +31,7 @@ cd taiga-docker
 
 ---
 
-## ✅ Step 3: Configure the Environment
+##  Step 3: Configure the Environment
 
 An `.env` file already exists in the repository. Open it for editing:
 
@@ -69,16 +69,10 @@ RABBITMQ_ERLANG_COOKIE=secret-erlang-cookie
 
 ---
 
-## ✅ Step 4: Start Taiga Using Docker Compose
+##  Step 4: Start Taiga Using Docker Compose
 
 ```bash
 docker compose up -d
-```
-
-If `docker compose` doesn’t work, try:
-
-```bash
-docker-compose up -d
 ```
 
 This command will pull and start all required containers:
@@ -93,7 +87,7 @@ This command will pull and start all required containers:
 
 ---
 
-## ✅ Step 5: Create the Admin User
+##  Step 5: Create the Admin User
 
 Once all containers are running, use the built-in helper script to create an admin user:
 
@@ -112,7 +106,7 @@ Enter your desired username, email, and password.
 
 ---
 
-## ✅ Step 6: Access the Taiga Web UI
+##  Step 6: Access the Taiga Web UI
 
 Open your browser and go to:
 
@@ -124,7 +118,7 @@ Login with the admin credentials you just created.
 
 ---
 
-## 🌐 Optional: Enable Persian Language
+##  Optional: Enable Persian Language
 
 After logging in:
 
